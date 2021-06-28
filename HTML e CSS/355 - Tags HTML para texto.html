@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu HTML</title>
+
+    <style>
+        .img-in-text {
+            width: 50px;
+            height: 44px;
+        }
+
+        .azul {
+            font-size: 16px;
+            color: blue;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cabeçalho</h1>
+    <p> <b>Lorem</b> <strong>ipsum</strong> <i>dolor</i> sit amet
+         consectetur adipisicing elit. 
+        <em>Ea voluptatum</em> quis, 
+        
+        <a href ="https://developer.mozilla.org/pt-BR/docs/
+        Web/HTML/Element/strong" target="_blank">harum</a>
+        
+        <del>dolorem</del> <ins>labore</ins> ullam ad 2<sup>2</sup>, H<sub>2</sub>O accusamus beatae, mollitia 
+        ex <s>cumque</s> sunt <u>ipsam</u> eveniet <small>exercitationem</small> 
+        id quaerat magni tempora.
+
+        <a href ="https://developer.mozilla.org/pt-BR/docs/
+        Web/HTML/Element/strong" target="_blank">
+        <img class="img-in-text" src="https://kangax.github.io/compat-table/mdn.png" 
+        alt="Logo da MDN" width="50" height="44"></a>
+    </p>
+
+    <hr>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit.
+        <q cite="https://developers.google.com/search/docs/advanced/
+        appearance/qualify-outbound-links?hl=pt-br">
+        No caso de determinados links no site, convém informar ao Google qual 
+        é sua relação com a página vinculada. Para fazer isso, use um dos 
+        seguintes valores de atributo rel na tag.
+    </q>
+        <span class="azul">Placeat</span> quisquam eos vero debitis! Cum, voluptatem inventore 
+        alias distinctio assumenda et. In a voluptas eveniet hic 
+        commodi sunt atque explicabo voluptate.
+    </p>
+
+    <blockquote cite="https://developers.google.com/search/docs/advanced/
+    appearance/qualify-outbound-links?hl=pt-br"><p>Agora sim estou
+        fazendo um bloco de citação.
+    </p></blockquote>
+
+<pre><code>
+    s1 = int(input('Primeiro segmento: '))
+    s2 = int(input('Segundo Segmento: '))
+    s3 = int(input('Terceiro segmento:'))
+    if s1 < s2+s3 and s2 < s1+s3 and s3 < s2+s1:
+        exis = 'PODEM FORMAR'
+        if s1 == s2 == s3:
+            print(f'Os seguimentos {exis} um triângulo Equilátero!')
+        elif s1 != s2 != s3 != s1:              #No != é necessário diferenciar em pares, o python não faz a sequencia como para o ==
+            print(f'Os seguimentos {exis} um triângulo Escaleno')
+        else:
+            print('Os seguimentos PODEM FORMAR um triângulo Isósceles')
+    else:
+        print('Não pode formar um triângulo!')      
+</code></pre>
+
+<div class="azul">Div é um bloco como este</div>
+
+</body>
+</html>
