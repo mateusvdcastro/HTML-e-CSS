@@ -1,0 +1,44 @@
+*{ /*selector: all */
+    margin: 0;
+    padding: 0;
+}
+
+.color-red{ /*selector of classes (.class) */
+    color: brown;
+}
+
+p, h1 { /*selector of all documents tags */
+    color: orangered;
+}
+
+body div section p,
+body div section h1 { /*selector of specific tags */
+    color: blue;
+}
+
+.main-content .paragraph, /*selector of class inside of class */
+.main-content h2{ /*selector of tag inside of class */
+    font-style: italic;
+}
+
+div.test h2.test1 { /* selector of downward/descendant */
+    color: gold;
+}
+
+.pai {  /* notice that both father than daughter were marked,
+    because of inheritance/heritage */
+    color: green;
+
+    /*For solve this problem, write this: 
+    div {
+    color: initial;
+    } 
+    
+    Once, for standard/default is:
+    
+    div {
+    color: inherit;
+    }
+    */
+}
+
