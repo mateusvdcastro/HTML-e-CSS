@@ -10,6 +10,33 @@
             content: ' - ';
             background: tomato;
         }
+
+        p{
+            font-size: 24px;
+        }
+
+        p::first-letter{
+            font-size: 150px;
+            display: block;
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+
+        p:not(.textbox)::first-line{
+            background: red;
+        }
+
+        p::selection{ /* select the text for to see the effect */
+            background: blue;
+            color: white;
+        }
+
+        ::placeholder{
+            font-size: 20px;
+            color: red;
+        }
+
+
     </style>
 </head>
 <body>
@@ -23,5 +50,9 @@
         <li>Item</li>
         <li>Item</li>
     </ul>
+    <p class="textbox">
+        <input type="text" placeholder="olá">
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni, eligendi totam minus aperiam officiis repellat reprehenderit quasi! Quis repellendus veritatis voluptatem delectus doloremque sint natus? At aliquam qui nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi illum perferendis reprehenderit enim ullam laboriosam rerum expedita ipsam similique consectetur, ut voluptate doloremque animi, quidem adipisci velit dicta deleniti? Delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni, eligendi totam minus aperiam officiis repellat reprehenderit quasi! Quis repellendus veritatis voluptatem delectus doloremque sint natus? At aliquam qui nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi illum perferendis reprehenderit enim ullam laboriosam rerum expedita ipsam similique consectetur, ut voluptate doloremque animi, quidem adipisci velit dicta deleniti? Delectus.</p>
 </body>
 </html>
