@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        Specificity order:
+        ID > Class > Attributes e Pseudo-classes > Element e Pseudo-elements
+        1    0                                     0
+        0    1                                     0
+        */
+
+        /* pass the mouse over the #p to see the specificity */
+        #p{
+            background: red;   /* You can write "!important" for to force the apply of a class less specified */
+        }
+
+        #p.p{
+            background: yellow;     /*Between this sets, will be aplied the bigger value of specificity (0,1,0) = 10 / (2,1,1) = 211 / (1,0,0), so will be applied the 211 (purple)  */
+        }
+        
+        #b p#p.p{
+            background: purple;
+        }
+
+
+    </style>
+</head>
+<body id="b">
+    <p class="p" id="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt hic voluptatibus vel libero, est illum dolorum quibusdam eveniet saepe et minima inventore pariatur quis doloremque commodi soluta sapiente exercitationem adipisci!</p>
+</body>
+</html>
