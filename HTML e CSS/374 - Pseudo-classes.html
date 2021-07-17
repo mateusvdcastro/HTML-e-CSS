@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        .heading{
+            transition: all 300ms ease-in-out;
+        }
+        .heading:hover{ /* "Hover" leave an effect when the mouse goes over */
+            background: red;
+        }
+
+        p a:hover{
+            color: darkgoldenrod;
+            background: darkblue; 
+        }
+
+        a:link{ /* Pseudo class for link unvisted */
+            color: darkgreen;
+        }
+
+        a:visited{ /* Pseudo class for link visted */
+            color: blue;
+        }
+
+        a:active{ /* "active" leave an effect when the mouse clicked */
+            background: darkslategray;
+        }
+
+        input:focus{ /* do CSS é aplicada quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento utilizando o teclado ou ativando o mesmo com o mouse */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            outline: none;
+            border: 10px solid black;
+        }
+
+        input:enabled{ /* :disabled para desabilitado e :enabled para habilitado */
+            border-top-color: red;
+        }
+
+        .disabled{
+            background-color: rebeccapurple;
+            cursor: not-allowed;
+        }
+
+        .changesize:checked + p{ /* "+ p" siblings selector */
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        .pai .lista li:last-child{
+            background-color: royalblue;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="text" enabled> <br>
+    <br>
+    <input class="disabled" type="text" disabled>
+    <input type="checkbox"><br>
+    <br>
+    <input class="changesize" type="checkbox">
+    <p>Olá mundo</p>
+    <h1 class="heading">
+        Lorem
+    </h1>
+    <p class="p">Lorem ipsum dolor <a href="#"> Fui visitado </a>  consectetur adipisicing elit.<a href="#1"> Nunca fui visitado </a> temporibus culpa expedita totam! Repellat, officia.</p>
+    <div class="pai">
+        <ul class="lista">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not e nth child</title>
+    <style>
+        p:not(.meio){ /* coloca azul em todos os p menos :not(condição) */
+            color: blue;
+        }
+
+        input:not(:checked) + p{
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        ul li:nth-child(2){ /* select by index of siblings */
+            background-color: rebeccapurple;
+        }
+
+        ul li:nth-child(even){ /* select all index pair/even */
+            font-style: italic;
+        }
+
+        ul li:nth-child(odd){ /* select all odd index */
+            color: springgreen;
+        }
+
+        ul li:nth-child(3n){ /* select from 3 out of 3 */
+            text-decoration: underline;
+        }
+
+        ul li:nth-child(3n+8){ /* begining by element 8, apply line though from 3 out of 3 */
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, facilis laudantium iusto neque repudiandae, qui distinctio voluptatum fugit odio, adipisci rem magnam mollitia dignissimos! Voluptatum id vel ipsam ab qui.</p>
+    <p class="meio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, facilis laudantium iusto neque repudiandae, qui distinctio voluptatum fugit odio, adipisci rem magnam mollitia dignissimos! Voluptatum id vel ipsam ab qui.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, facilis laudantium iusto neque repudiandae, qui distinctio voluptatum fugit odio, adipisci rem magnam mollitia dignissimos! Voluptatum id vel ipsam ab qui.</p>
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+</body>
+</html>
