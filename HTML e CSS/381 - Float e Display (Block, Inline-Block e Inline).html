@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float e Display</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .grid{
+            padding: 30px;
+        }
+
+        .grid::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .grid .col{
+            width: 33.33%;
+            height: 300px;
+            float: left;
+            padding: 15px;
+        }
+
+        .grid .col-content{
+            width:100%;
+            height: 100%;
+            background: red;
+        }
+        p{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-content">
+                conteudo
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, doloremque cum voluptatum alias dolorem minima minus voluptas fugiat nobis ullam, omnis placeat blanditiis quos dolores ipsam consectetur, aut excepturi in.</p>
+</body>
+</html>
