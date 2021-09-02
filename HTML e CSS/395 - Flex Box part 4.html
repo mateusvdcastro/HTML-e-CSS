@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 24px;
+        }
+
+        p {
+            margin: 0 0 24px;
+        }
+
+        .two-columns {
+            display: flex;
+        }
+
+        .two-columns .col1{
+            display: flex;
+            flex-direction: column;
+            background-color: lawngreen;
+            margin: 15px;
+            padding: 30px;
+        }
+
+        .gallery {
+            flex-flow: row wrap;
+            display: flex;
+        }
+
+        .gallery .img {
+            flex: 1 0 20%;
+            height: 50px;
+            background: blue;
+            margin: 10px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="two-columns">
+        <div class="col1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta quis amet corporis laudantium hic voluptate maxime assumenda corrupti voluptatibus dignissimos quae vel officiis fugiat provident est nam, accusamus quos?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta quis amet corporis laudantium hic voluptate maxime assumenda corrupti voluptatibus dignissimos quae vel officiis fugiat provident est nam, accusamus quos?</p>
+        </div>
+        <div class="col1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta quis amet corporis laudantium hic voluptate maxime assumenda corrupti voluptatibus dignissimos quae vel officiis fugiat provident est nam, accusamus quos?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dicta quis amet corporis laudantium hic voluptate maxime assumenda corrupti voluptatibus dignissimos quae vel officiis fugiat provident est nam, accusamus quos?</p>
+
+            <div class="gallery">
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <figure>
+        <img src="http://darktef.github.io/assets/images/posts/flex_terms.png" height="333px" width="563px" alt="Uma imagem impressionante">
+    </figure>
+</body>
+</html>
