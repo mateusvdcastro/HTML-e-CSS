@@ -2,6 +2,7 @@
     --primary-color: #0A1128;
     --white-color: #fff;
     --light-gray-color: #EEEEEE;
+    --secundary-color:darkblue; 
     --gap: 3rem;
 }
 
@@ -22,6 +23,7 @@ body {
     font-family: 'Archivo', sans-serif;
     font-size: 2rem;
     color: var(--primary-color);
+    line-height: 1.5;
 }
 
 .main-bg {
@@ -36,7 +38,7 @@ body {
 }
 
 .main-content {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
     align-items: center;
@@ -47,13 +49,13 @@ body {
 }
 
 .menu{
-    background: var(--white-color);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 1px solid var(--light-gray-color);
+    z-index: 1;
+    border-bottom: 0.01rem solid var(--light-gray-color);
 }
 
 .menu-content{
@@ -93,13 +95,44 @@ body {
     left: 50%;
     width: 0;
     height: 0.2rem;
-    background: darkblue;
+    background: var(--secundary-color);
     transition: all 300ms ease-in-out;
 }
 
 .menu ul li a:hover::after {
     width: 50%;
     left: 25%;
+}
+
+.menu-spacing {
+    height: 6.5rem;
+}
+
+.intro-content{
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.intro-text-content, intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-img img, .intro-img svg {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3, h4, h5, h6{
