@@ -208,7 +208,7 @@ body {
 
 body .full-width{
     width: 100%;
-    flex-grow: 1 1 100%;
+    flex: 1 1 100%;
 }
 
 table {
@@ -316,6 +316,25 @@ tfoot td, table th {
     color: red;
 }
 
+.close-menu {
+    display: none;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--primary-color);
+}
+
 @media (max-width:800px){
     .intro-content, .grid {
         grid-template-columns: 1fr;
@@ -333,6 +352,55 @@ tfoot td, table th {
 
     .grid-one-content {
         display: block;
+    }
+
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '≡';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+     
+    /*×*/
+    .close-menu:checked~.menu {
+        display: block;
+
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .menu-spacing {
+        display: none;
     }
 }
 
@@ -370,5 +438,3 @@ h6 {
 p {
     margin-bottom: 3rem;
 }
-
-
